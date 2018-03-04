@@ -6,8 +6,11 @@
 
 import math as m
 
-#where -3 <= x1 <= 12 and 4 <= x2 <= 6
-function = lambda x1, x2: 21.5 + x1*m.sin(4*m.pi*x1) + x2*m.sin(20*m.pi*x2)
+def func(x1, x2):
+    if -3 <= x1 <= 12 and 4 <= x2 <= 6:
+        return 21.5 + x1*m.sin(4*m.pi*x1) + x2*m.sin(20*m.pi*x2)
+    else:
+        print "x1 or x2 out of bounds!"
 
 def main():
     number_of_parents = 3
@@ -19,7 +22,7 @@ def main():
     overall_learning_rate = 1 / m.sqrt(2*n)
     coordinate_learning_rate = 1 /  m.sqrt(2*m.sqrt(n))
     
-    print function(6, 5)
+    print func(-2.23452, 4.928347)
 
 if __name__ == "__main__":
     main()
