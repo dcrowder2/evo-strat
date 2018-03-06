@@ -5,6 +5,7 @@
 #Dakota Crowder - dcrowder2@alaska.edu
 
 import math as m
+import random as r
 
 def func(x1, x2):
     if -3 <= x1 <= 12 and 4 <= x2 <= 6:
@@ -13,6 +14,8 @@ def func(x1, x2):
         print "x1 or x2 out of bounds!"
 
 def main():
+    x0 = r.uniform(-3, 12)
+    x1 = r.uniform(4, 6)
     number_of_parents = 3
     number_of_offspring = 21
     mutation_step_size = 1
@@ -22,7 +25,7 @@ def main():
     overall_learning_rate = 1 / m.sqrt(2*n)
     coordinate_learning_rate = 1 /  m.sqrt(2*m.sqrt(n))
     
-    print func(-2.23452, 4.928347)
+    fitness = func(x0, x1)
 
 if __name__ == "__main__":
     main()
